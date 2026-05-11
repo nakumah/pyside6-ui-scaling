@@ -14,19 +14,11 @@ class ScaledStyle(qtw.QProxyStyle):
     def pixelMetric(self, metric, option=None, widget=None):
         value = super().pixelMetric(metric, option, widget)
 
-        if metric in (
-            qtw.QStyle.PixelMetric.PM_SmallIconSize,
-            qtw.QStyle.PixelMetric.PM_LargeIconSize,
-            qtw.QStyle.PixelMetric.PM_ToolBarIconSize,
-            qtw.QStyle.PixelMetric.PM_ButtonIconSize,
-        ):
-            # clamp the scaling to be at least 1
-            return max(1, int(value * self._scale))
-
-        return value
+        # clamp the scaling to be at least 1
+        return int(value * self._scale) or 1
 
 
-class UIScalingManager(qtc.QObject):
+class GUIScalingManager(qtc.QObject):
 
     scaleChanged = qtc.Signal(float)
 
@@ -55,6 +47,10 @@ class UIScalingManager(qtc.QObject):
     def applyScale(self, app: qtw.QApplication) -> None:
 
         self.__scaledStyle.setScale(self.__scale)
+
+        # newFont = app.font()
+        # newFont.setPointSizeF(self.__defaultFontSize * self.__scale)
+        # app.setFont(newFont)
 
         app.setStyleSheet(
             f"""
