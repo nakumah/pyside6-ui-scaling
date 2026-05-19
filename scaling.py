@@ -48,21 +48,9 @@ class GUIScalingManager(qtc.QObject):
 
         self.__scaledStyle.setScale(self.__scale)
 
-        # newFont = app.font()
-        # newFont.setPointSizeF(self.__defaultFontSize * self.__scale)
-        # app.setFont(newFont)
-
-        app.setStyleSheet(
-            f"""
-                QWidget{{
-                    font-size: {self.__defaultFontSize * self.__scale}px;
-                }}
-            """
-        )
-
-        # for widget in app.allWidgets():
-        #     widget.updateGeometry()
-        #     widget.update()
+        newFont = app.font()
+        newFont.setPointSizeF(self.__defaultFontSize * self.__scale)
+        app.setFont(newFont)
 
     def __clampToScaleRange(self, s: float) -> float:
         return max(self.__scaleLB, min(s, self.__scaleUB))

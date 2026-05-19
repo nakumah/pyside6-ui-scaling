@@ -21,6 +21,29 @@ class CustomMenuBar(qtw.QMenuBar):
         self.updateGeometry()
         self.adjustSize()
 
+
+class StyledButton(qtw.QPushButton):
+    def __init__(self, text: str, parent=None) -> None:
+        super().__init__(text, parent=parent)
+        self.setObjectName("CustomButton")
+
+        self.setStyleSheet(
+            """
+                QPushButton#CustomButton{
+                    background: pink;
+                    color: white;
+                    border: 1px solid black;
+                    padding: 20px;
+                    font-weight: bold;
+                }
+            """
+        )
+
+    def applyScale(self, scale: float):
+        font = self.font()
+        font.setPointSizeF(font.pointSizeF() * scale)
+        self.setFont(font)
+
 class MainWindow(qtw.QMainWindow):
     def __init__(self, app: qtw.QApplication) -> None:
         super().__init__()
@@ -34,10 +57,18 @@ class MainWindow(qtw.QMainWindow):
         self.inputField = qtw.QLineEdit("Hello World")
         self.scaleUpButton = qtw.QPushButton("Scale Up")
         self.scaleDownButton = qtw.QPushButton("Scale Down")
+        self.customButton = StyledButton("Custom Button")
 
         scrollAreaLayout = qtw.QVBoxLayout()
-        for w in MainWindow.createGroupWidgets(100):
+        groupWidgetCount = 100
+        groupWidgets =  MainWindow.createGroupWidgets(groupWidgetCount)
+        totalWidgetCount = 0
+        for w in groupWidgets:
+            c = w.layout().count()
             scrollAreaLayout.addWidget(w)
+            totalWidgetCount += c
+
+        self.setWindowTitle(f"Total Widgets \u003E {totalWidgetCount}")
 
         scrollAreaWidget = qtw.QWidget()
         scrollAreaWidget.setLayout(scrollAreaLayout)
@@ -48,6 +79,7 @@ class MainWindow(qtw.QMainWindow):
 
         widgetScalingBtnsLayout = qtw.QVBoxLayout()
         widgetScalingBtnsLayout.addWidget(self.inputField)
+        widgetScalingBtnsLayout.addWidget(self.customButton)
         widgetScalingBtnsLayout.addWidget(centralScrollArea)
         widgetScalingBtnsLayout.addWidget(self.scaleUpButton)
         widgetScalingBtnsLayout.addWidget(self.scaleDownButton)
@@ -73,7 +105,7 @@ class MainWindow(qtw.QMainWindow):
 
     def handleScaleChanged(self, scale: float) -> None:
         self.inputField.setText(f"Scale: {scale}")
-        # self.customMenuBar.applyScale(self.app.font())
+        self.customButton.setFont(self.app.font())
 
     @staticmethod
     def populateTree(tree: qtw.QTreeWidget):
@@ -99,8 +131,10 @@ class MainWindow(qtw.QMainWindow):
         MainWindow.populateTree(treeWidget)
 
         styledButton = qtw.QPushButton("Sample Styled Button")
+        styledButton.setIcon(qta.icon("msc.home", color="#ff1ef2"))
+        styledButton.setObjectName("StyledButton")
         styledButton.setStyleSheet(f"""
-            QPushButton{{ 
+            QPushButton#StyledButton{{ 
                 background: orange;
                 color: white;
                 border: 1px solid black;
@@ -108,14 +142,12 @@ class MainWindow(qtw.QMainWindow):
             }}
         """)
 
-
         toolbar = qtw.QToolBar()
         helpAction = qtg.QAction(toolbar)
         helpIcon = qta.icon("msc.question", color="#ff0000")
         helpAction.setIcon(helpIcon)
         helpAction.setToolTip("Help Me")
 
-        
         toolbar.addSeparator()
         toolbar.addAction(helpAction)
         toolbar.addSeparator()
@@ -123,7 +155,6 @@ class MainWindow(qtw.QMainWindow):
         tableModel = TableModel()
         tableView = qtw.QTableView()
         tableView.setModel(tableModel)
-
 
         group = qtw.QGroupBox("Widget Group")
         layout = qtw.QVBoxLayout()
