@@ -178,5 +178,5 @@ qss += gen.generateFontWeightVariantQSS()
 qss += gen.generateColorVariantQSS()
 qss += gen.generateMixedVariantQSS()
 
-qssFile = os.path.join(os.getcwd(), "resources", "qss", "q_label.qss")
+qssFile = os.path.join(os.getcwd(), "generated", "q_label.qss")
 gen.saveToFile(qssFile, qss)
