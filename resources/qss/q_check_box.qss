@@ -58,13 +58,13 @@ QCheckBox#VCheckBox::indicator:unchecked:pressed{
 QCheckBox#VCheckBox::indicator:checked{
     background: @primary;
     border: 1px solid @primary;
-    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+    border-image: url(:/images/icons/checkmark.svg) 0 0 0 0 stretch stretch;
 }
 
 QCheckBox#VCheckBox::indicator:focus{
     background: @primary;
     border: 2px solid @primary;
-    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+    border-image: url(:/images/icons/checkmark.svg) 0 0 0 0 stretch stretch;
 }
 
 QCheckBox#VCheckBox::indicator:checked:disabled{
@@ -79,7 +79,7 @@ QCheckBox#VCheckBox::indicator:checked:pressed{
 QCheckBox#VCheckBox::indicator:checked:hover{
     background-color: @primary;
     border-color: @primary;
-    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+    border-image: url(:/images/icons/checkmark.svg) 0 0 0 0 stretch stretch;
 }
 
 /* =========== intermediate state ============= */
@@ -87,6 +87,6 @@ QCheckBox#VCheckBox::indicator:checked:hover{
 QCheckBox#VCheckBox::indicator:indeterminate{
     background-color: @primary;
     border-color: @primary_tint;
-    border-image: url(:/images/checkbox/dash.svg) 0 0 0 0 stretch stretch;
+    border-image: url(:/images/icons/dash.svg) 0 0 0 0 stretch stretch;
 }
 

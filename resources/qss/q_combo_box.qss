@@ -69,5 +69,5 @@ QComboBox#VComboBox:!editable:on, QComboBox#VComboBox::drop-down:editable:on {
 
 
 QComboBox#VComboBox::down-arrow{
-    border-image: url(":/images/combobox/chevron-down.svg") 0 0 0 0 stretch stretch;
+    border-image: url(":/images/icons/chevron-down.svg") 0 0 0 0 stretch stretch;
 }

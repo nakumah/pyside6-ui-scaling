@@ -10,10 +10,6 @@
         <file>images/icons/chevron-down.svg</file>
         <file>images/icons/chevron-down-selected.svg</file>
 
-        <file>images/checkbox/checkmark.svg</file>
-        <file>images/checkbox/dash.svg</file>
-        <file>images/combobox/chevron-down.svg</file>
-
         <!-- qss -->
         <file>qss/q_line_edit.qss</file>
         <file>qss/q_text_edit.qss</file>
