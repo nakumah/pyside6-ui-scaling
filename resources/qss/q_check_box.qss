@@ -1,0 +1,92 @@
+QCheckBox#VCheckBox{
+    spacing: 10px;
+    color: @dark;
+}
+
+QCheckBox#VCheckBox:hover{
+    color: @dark_shade
+}
+
+QCheckBox#VCheckBox:disabled{
+    color: @light_shade;
+}
+
+QCheckBox#VCheckBox::indicator{
+    border: 1px solid @medium_shade;
+    border-radius: 3px;
+    background-color: @light;
+}
+
+QCheckBox#VCheckBox::indicator:disabled{
+    background-color: @medium;
+    border-color: @medium_shade;
+}
+
+QCheckBox#VCheckBox::indicator:hover{
+    border-color: @primary_shade;
+    background-color: @white;
+}
+
+QCheckBox#VCheckBox::indicator:unchecked{
+    background: white;
+    border: 1px solid @medium;
+    image: none;
+}
+
+QCheckBox#VCheckBox::indicator:unchecked:focus{
+    background: white;
+    border: 2px solid @primary;
+    image: none;
+}
+
+QCheckBox#VCheckBox::indicator:unchecked:disabled{
+    background-color: @highlight;
+    border-color: @highlight_tint;
+}
+
+QCheckBox#VCheckBox::indicator:unchecked:hover{
+    background-color: @light_tint;
+    border-color: @primary;
+}
+
+
+/* =========== unchecked state =============== */
+QCheckBox#VCheckBox::indicator:unchecked:pressed{
+    border-style: inset;
+}
+
+QCheckBox#VCheckBox::indicator:checked{
+    background: @primary;
+    border: 1px solid @primary;
+    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+}
+
+QCheckBox#VCheckBox::indicator:focus{
+    background: @primary;
+    border: 2px solid @primary;
+    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+}
+
+QCheckBox#VCheckBox::indicator:checked:disabled{
+    background-color: @highlight;
+    border-color: @highlight_tint;
+}
+
+QCheckBox#VCheckBox::indicator:checked:pressed{
+    border-style: inset;
+}
+
+QCheckBox#VCheckBox::indicator:checked:hover{
+    background-color: @primary;
+    border-color: @primary;
+    border-image: url(:/images/checkbox/checkmark.svg) 0 0 0 0 stretch stretch;
+}
+
+/* =========== intermediate state ============= */
+
+QCheckBox#VCheckBox::indicator:indeterminate{
+    background-color: @primary;
+    border-color: @primary_tint;
+    border-image: url(:/images/checkbox/dash.svg) 0 0 0 0 stretch stretch;
+}
+

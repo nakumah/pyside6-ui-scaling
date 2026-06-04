@@ -1,0 +1,15 @@
+QLineEdit#VLineEdit{
+    border: 1px solid @light_shade;
+    border-radius: 0px;
+    background: @white;
+    selection-background-color: @primary_tint;
+    padding: 1px;
+}
+
+QLineEdit#VLineEdit:read-only{
+    background: @light_tint;
+}
+
+QLineEdit#VLineEdit:focus {
+    border: 1px solid @primary;
+}

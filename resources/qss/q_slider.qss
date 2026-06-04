@@ -1,0 +1,56 @@
+QSlider#VSlider:horizontal{
+    min-width: 30px;
+    height: 15px;
+    color: @dark;
+}
+
+QSlider#VSlider::handle:horizontal{
+    width: 5px;
+    border: 1px solid @primary;
+    border-radius: 10px;
+    background: @light;
+    margin: -6px 0;
+}
+
+QSlider#VSlider::groove:horizontal{
+    height: 3px;
+    border: 1px solid @dark;
+}
+
+QSlider#VSlider::add-page:horizontal{
+    background: @white;
+    border: 1px solid @light_shade;
+}
+
+QSlider#VSlider::sub-page:horizontal{
+    background: @primary;
+    border: 1px solid @light_shade;
+}
+
+QSlider#VSlider:vertical{
+    min-width: 30px;
+    height: 15px;
+}
+
+QSlider#VSlider::handle:vertical{
+    width: 5px;
+    border: 1px solid @primary;
+    border-radius: 10px;
+    background: @light;
+    margin: -6px 0;
+}
+
+QSlider#VSlider::groove:vertical{
+    height: 3px;
+    border: 1px solid @dark;
+}
+
+QSlider#VSlider::add-page:vertical{
+    background: @white;
+    border: 1px solid @light_shade;
+}
+
+QSlider#VSlider::sub-page:vertical{
+    background: @primary;
+    border: 1px solid @light_shade;
+}

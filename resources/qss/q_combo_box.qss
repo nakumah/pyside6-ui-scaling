@@ -1,0 +1,73 @@
+
+QComboBox#VComboBox {
+    border: 1px solid @light_shade;
+    padding: 2px 5px;
+    border-radius: 1px;
+    background: @light;
+}
+
+QComboBox#VComboBox QAbstractItemView {
+    background-color: @light;
+    color: @dark;
+
+    selection-background-color: @primary_tint;
+    selection-color: @dark;
+
+    outline: 0px;
+}
+
+QComboBox#VComboBox QAbstractItemView::item {
+    color: @dark;
+
+    min-height: 20px;
+    /* padding-left: 10px; */
+    background: @light;
+    border-width: 0px 0px 1px 0px;
+    border-color: @light_shade;
+    border-style: solid;
+}
+
+QComboBox#VComboBox QAbstractItemView::item:selected {
+    background: @primary;
+    color: @light;
+}
+
+QComboBox#VComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    
+    padding-right: 10px;
+
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: @white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+QComboBox#VComboBox:focus {
+    border: 1px solid @primary;
+}
+
+QComboBox#VComboBox:editable {
+    background: @white;
+}
+
+QComboBox#VComboBox:on {
+    padding-left: 4px;
+}
+
+QComboBox#VComboBox:!editable, QComboBox#VComboBox::drop-down:editable {
+    background: @white;
+}
+
+QComboBox#VComboBox:!editable:on, QComboBox#VComboBox::drop-down:editable:on {
+    background: @white;
+    selection-background-color: @primary;
+}
+
+
+QComboBox#VComboBox::down-arrow{
+    border-image: url(":/images/combobox/chevron-down.svg") 0 0 0 0 stretch stretch;
+}

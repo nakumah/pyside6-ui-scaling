@@ -8,7 +8,7 @@ class TableModel(QAbstractTableModel):
         super().__init__(parent)
 
         entries = np.random.rand(70, 4) * 100
-        colNames = [f"Column ({i + 1 })" for i in range(entries.shape[1])]
+        colNames = [f"Column {i + 1 }\n(x/y)" for i in range(entries.shape[1])]
         self._df = pd.DataFrame(
             entries,
             columns=colNames,

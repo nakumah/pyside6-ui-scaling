@@ -1,0 +1,475 @@
+/* ============================================================
+   QPushButton — Complete PySide6 Stylesheet
+   ============================================================
+   Covers: default, hover, pressed, checked, disabled,
+           flat, icon-only, icon+text, destructive,
+           primary, secondary, small, large, and
+           QPushButton with menu indicator.
+   ============================================================ */
+
+
+/* ─────────────────────────────────────────
+   BASE / DEFAULT
+   ───────────────────────────────────────── */
+QPushButton {
+    /* Typography */
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #1e1e2e;
+
+    /* Box model */
+    padding: 7px 18px;
+    min-width: 80px;
+    min-height: 32px;
+
+    /* Background */
+    background-color: #f0f0f5;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #f7f7fc,
+        stop: 1 #e8e8f0
+    );
+
+    /* Border */
+    border: 1px solid #c0c0d0;
+    border-radius: 6px;
+
+    /* Miscellaneous */
+    outline: none;
+    icon-size: 16px 16px;
+}
+
+/* ─────────────────────────────────────────
+   HOVER
+   ───────────────────────────────────────── */
+QPushButton:hover {
+    color: #1a1a2e;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #ffffff,
+        stop: 1 #eaeaf5
+    );
+    border-color: #a0a0bf;
+}
+
+/* ─────────────────────────────────────────
+   PRESSED / ACTIVE
+   ───────────────────────────────────────── */
+QPushButton:pressed {
+    color: #0f0f1e;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #d8d8ea,
+        stop: 1 #e4e4f0
+    );
+    border-color: #8888aa;
+    padding-top: 8px;   /* subtle "push-down" effect */
+    padding-bottom: 6px;
+}
+
+/* ─────────────────────────────────────────
+   FOCUSED (keyboard navigation)
+   ───────────────────────────────────────── */
+QPushButton:focus {
+    border-color: #5b7de8;
+    outline: none;
+    /* Qt doesn't support box-shadow, so use a colored border */
+}
+
+/* ─────────────────────────────────────────
+   CHECKED (for checkable buttons / toggles)
+   ───────────────────────────────────────── */
+QPushButton:checked {
+    color: #ffffff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #5b7de8,
+        stop: 1 #4a68d4
+    );
+    border-color: #3d5bbf;
+}
+
+QPushButton:checked:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #6e8eef,
+        stop: 1 #5b7de8
+    );
+    border-color: #4a68d4;
+}
+
+QPushButton:checked:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #4055b5,
+        stop: 1 #4f6ccb
+    );
+    border-color: #3348a0;
+}
+
+/* ─────────────────────────────────────────
+   DISABLED
+   ───────────────────────────────────────── */
+QPushButton:disabled {
+    color: #a8a8b8;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #f0f0f4,
+        stop: 1 #e8e8ec
+    );
+    border-color: #d0d0d8;
+}
+
+
+/* ============================================================
+   VARIANT — PRIMARY (add class via setProperty)
+   Usage in Python:
+       btn.setProperty("class", "primary")
+       btn.style().unpolish(btn)
+       btn.style().polish(btn)
+   ============================================================ */
+QPushButton[class="primary"] {
+    color: #ffffff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #5b7de8,
+        stop: 1 #4a68d4
+    );
+    border: 1px solid #3d5bbf;
+    font-weight: 600;
+}
+
+QPushButton[class="primary"]:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #6e8eef,
+        stop: 1 #5b7de8
+    );
+    border-color: #4a68d4;
+}
+
+QPushButton[class="primary"]:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #3f59c8,
+        stop: 1 #4f6cd4
+    );
+    border-color: #3040a8;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton[class="primary"]:disabled {
+    color: #c0c8f0;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #8898d8,
+        stop: 1 #7888c8
+    );
+    border-color: #6878b8;
+}
+
+
+/* ============================================================
+   VARIANT — SECONDARY / OUTLINED
+   Usage: btn.setProperty("class", "secondary")
+   ============================================================ */
+QPushButton[class="secondary"] {
+    color: #4a68d4;
+    background: transparent;
+    border: 1.5px solid #4a68d4;
+}
+
+QPushButton[class="secondary"]:hover {
+    color: #3d5bbf;
+    background: rgba(91, 125, 232, 0.07);
+    border-color: #3d5bbf;
+}
+
+QPushButton[class="secondary"]:pressed {
+    color: #2d4aaa;
+    background: rgba(91, 125, 232, 0.15);
+    border-color: #2d4aaa;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton[class="secondary"]:disabled {
+    color: #9090b0;
+    border-color: #b8b8d0;
+    background: transparent;
+}
+
+
+/* ============================================================
+   VARIANT — DESTRUCTIVE / DANGER
+   Usage: btn.setProperty("class", "danger")
+   ============================================================ */
+QPushButton[class="danger"] {
+    color: #ffffff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #e85b5b,
+        stop: 1 #d44a4a
+    );
+    border: 1px solid #bf3d3d;
+    font-weight: 600;
+}
+
+QPushButton[class="danger"]:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #ef6e6e,
+        stop: 1 #e85b5b
+    );
+    border-color: #d04a4a;
+}
+
+QPushButton[class="danger"]:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #c03030,
+        stop: 1 #d44040
+    );
+    border-color: #a82828;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton[class="danger"]:disabled {
+    color: #f0c0c0;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #d89090,
+        stop: 1 #c88080
+    );
+    border-color: #b87070;
+}
+
+
+/* ============================================================
+   VARIANT — SUCCESS
+   Usage: btn.setProperty("class", "success")
+   ============================================================ */
+QPushButton[class="success"] {
+    color: #ffffff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #4caf7d,
+        stop: 1 #3a9e6c
+    );
+    border: 1px solid #2e8a58;
+    font-weight: 600;
+}
+
+QPushButton[class="success"]:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #5ec28e,
+        stop: 1 #4caf7d
+    );
+    border-color: #3a9e6c;
+}
+
+QPushButton[class="success"]:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #2e7a50,
+        stop: 1 #3a9060
+    );
+    border-color: #246044;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton[class="success"]:disabled {
+    color: #b0e0c8;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #78c09a,
+        stop: 1 #68b08a
+    );
+    border-color: #58a07a;
+}
+
+
+/* ============================================================
+   VARIANT — GHOST / FLAT
+   Usage:  btn.setFlat(True)  OR  btn.setProperty("class", "ghost")
+   ============================================================ */
+QPushButton:flat,
+QPushButton[class="ghost"] {
+    color: #4a4a6a;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+QPushButton:flat:hover,
+QPushButton[class="ghost"]:hover {
+    color: #1e1e2e;
+    background: rgba(30, 30, 60, 0.07);
+    border-color: transparent;
+}
+
+QPushButton:flat:pressed,
+QPushButton[class="ghost"]:pressed {
+    color: #0f0f20;
+    background: rgba(30, 30, 60, 0.14);
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton:flat:disabled,
+QPushButton[class="ghost"]:disabled {
+    color: #b0b0c8;
+    background: transparent;
+}
+
+
+/* ============================================================
+   VARIANT — SMALL
+   Usage: btn.setProperty("class", "small")
+   ============================================================ */
+QPushButton[class="small"] {
+    font-size: 11px;
+    padding: 4px 12px;
+    min-height: 24px;
+    min-width: 56px;
+    border-radius: 4px;
+    icon-size: 12px 12px;
+}
+
+
+/* ============================================================
+   VARIANT — LARGE
+   Usage: btn.setProperty("class", "large")
+   ============================================================ */
+QPushButton[class="large"] {
+    font-size: 15px;
+    padding: 11px 28px;
+    min-height: 44px;
+    min-width: 110px;
+    border-radius: 8px;
+    icon-size: 20px 20px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   VARIANT — ICON-ONLY (square, no text)
+   Usage: btn.setProperty("class", "icon-btn")
+   ============================================================ */
+QPushButton[class="icon-btn"] {
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    padding: 6px;
+    border-radius: 6px;
+    icon-size: 18px 18px;
+}
+
+QPushButton[class="icon-btn"][class="large"] {
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: 10px;
+    icon-size: 22px 22px;
+}
+
+
+/* ============================================================
+   MENU INDICATOR (::menu-indicator sub-control)
+   Shown when a QMenu is attached via setMenu()
+   ============================================================ */
+QPushButton::menu-indicator {
+    image: url(:/icons/chevron-down.png);   /* replace with your asset */
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+}
+
+QPushButton::menu-indicator:pressed {
+    top: 1px;   /* nudge down on press */
+}
+
+
+/* ============================================================
+   DARK THEME OVERRIDES
+   Apply by setting the "theme" property on a parent widget, e.g.:
+       window.setProperty("theme", "dark")
+   Then add [theme="dark"] scoping in your app's QSS, or
+   use a separate dark.qss and load it via QApplication.setStyleSheet()
+   ============================================================ */
+QPushButton[theme="dark"] {
+    color: #e8e8f8;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #2e2e42,
+        stop: 1 #252538
+    );
+    border: 1px solid #484860;
+}
+
+QPushButton[theme="dark"]:hover {
+    color: #f0f0ff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #383850,
+        stop: 1 #2e2e45
+    );
+    border-color: #6060a0;
+}
+
+QPushButton[theme="dark"]:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #1e1e30,
+        stop: 1 #282840
+    );
+    border-color: #4848a0;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+QPushButton[theme="dark"]:disabled {
+    color: #585870;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #222230,
+        stop: 1 #1e1e2a
+    );
+    border-color: #383848;
+}
+
+QPushButton[theme="dark"][class="primary"] {
+    color: #ffffff;
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #4a68d4,
+        stop: 1 #3a58c4
+    );
+    border-color: #2d4aaa;
+}
+
+QPushButton[theme="dark"][class="primary"]:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #5b7ae0,
+        stop: 1 #4a68d4
+    );
+}
+
+QPushButton[theme="dark"][class="danger"] {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #c04040,
+        stop: 1 #b03030
+    );
+    border-color: #8a2020;
+}

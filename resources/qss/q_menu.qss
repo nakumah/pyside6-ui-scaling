@@ -1,0 +1,39 @@
+
+QMenu{
+    background-color: @light;
+    padding: 3px;
+    border: 1px solid @light_shade;
+}
+
+QMenu::item {
+    background-color: transparent;
+    color: @dark_tint;
+    padding: 5px 10px 5px 5px;
+    margin: 0px;
+}
+
+QMenu::item:hover {
+    background-color: @primary_tint;
+    border-color: @primary_shade;
+    color: @white;
+}
+
+QMenu::item:selected {
+    background-color: @primary;
+    color: @white;
+}
+
+QMenu::item:disabled {
+    background-color: transparent;
+    color: @light_shade;
+}
+
+QMenu::separator {
+    background: @light_shade;
+    margin: 0;
+    height: 1px;
+}
+
+QMenu::icon{
+    left: 5px;
+}

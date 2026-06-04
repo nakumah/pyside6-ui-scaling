@@ -1,0 +1,16 @@
+
+QSplitter::handle:horizontal {
+    background-color: @light_tint;
+}
+
+QSplitter::handle:vertical {
+   background-color: @light_tint;
+}
+
+QSplitter::handle:pressed {
+   background-color: @light_tint;
+}
+
+QSplitter {
+   background-color: @white;
+}

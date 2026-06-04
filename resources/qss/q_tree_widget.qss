@@ -1,0 +1,71 @@
+
+QTreeWidget#VTreeWidget {
+    show-decoration-selected: 1;
+    padding: 0px 0px 0px 0px;
+}
+
+QTreeWidget#VTreeWidget::item {
+    border: 0px solid transparent;
+    padding: 5px;
+}
+
+QTreeWidget#VTreeWidget::item:hover {
+    background: @hover;
+    border: 0px solid @light_shade;
+}
+
+QTreeWidget#VTreeWidget::item:selected {
+    border: 0px solid @primary;
+}
+
+QTreeWidget#VTreeWidget::item:selected:active{
+    background: @primary;
+}
+
+QTreeWidget#VTreeWidget::item:selected:!active {
+    background: @hover_shade;
+}
+
+/* Expand/collapse arrow */
+QTreeWidget#VTreeWidget::branch {
+    background: transparent;
+}
+
+QTreeWidget#VTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget#VTreeWidget::branch:closed:has-children:has-siblings {
+    image: url(":/images/icons/chevron-right.svg");
+}
+
+QTreeWidget#VTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget#VTreeWidget::branch:open:has-children:has-siblings {
+    image: url(":/images/icons/chevron-down.svg");
+}
+
+/* Match branch background to item on hover/select */
+QTreeWidget#VTreeWidget::branch:hover {
+    background: @hover;
+}
+
+QTreeWidget#VTreeWidget::branch:selected:active {
+    background: @primary;
+}
+
+QTreeWidget#VTreeWidget::branch:selected:!active {
+    background: @hover_shade;
+}
+
+QTreeWidget#VTreeWidget::branch:closed:has-children {
+    image: url(":/images/icons/chevron-right.svg");
+}
+
+QTreeWidget#VTreeWidget::branch:open:has-children {
+    image: url(":/images/icons/chevron-down.svg");
+}
+
+QTreeWidget#VTreeWidget::branch:selected:closed:has-children {
+    image: url(":/images/icons/chevron-right-selected.svg");
+}
+
+QTreeWidget#VTreeWidget::branch:selected:open:has-children {
+    image: url(":/images/icons/chevron-down-selected.svg");
+}

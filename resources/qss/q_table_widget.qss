@@ -1,0 +1,27 @@
+QTableView#VTableView {
+    selection-background-color: @primary_shade;
+    border-width: 0px 1px 1px 1px;
+    border-color: @light_shade;
+    border-style: solid;
+}
+
+QTableView#VTableView QHeaderView::section {
+    background-color: @light_tint;
+    color: @dark_tint;
+    border-width: 0px 1px 1px 0px;
+    border-color: @light_shade;
+    border-style: solid;
+}
+
+QTableView#VTableView QTableCornerButton::section {
+    border-radius: 0px;
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @light, stop: 1.0 @light_tint);
+    padding: 5px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: @light_shade;
+    color: @dark_shade;
+}

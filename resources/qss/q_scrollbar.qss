@@ -1,0 +1,59 @@
+
+QScrollBar:vertical {
+    border-width: 0px 0px 0px 0px;
+    border-color: @light_shade;
+    border-style: solid;
+    background: @light;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background: @light_shade;
+    width: 10px;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+    height:0;
+}
+
+QScrollBar::sub-line:vertical {
+    height:0;
+}
+
+QScrollBar:bottom-arrow:vertical, QScrollBar::top-arrow:vertical {
+    display: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border-width: 0px 0px 0px 0px;
+    border-color: @light_shade;
+    border-style: solid;
+    background: @light;
+    height: 10px;
+}
+
+QScrollBar::handle:horizontal {
+    background: @light_shade;
+    min-width: 20px;
+}
+
+QScrollBar::add-line:horizontal {
+    width:0;
+}
+
+QScrollBar::sub-line:horizontal {
+    width:0;
+}
+
+QScrollBar:bottom-arrow:horizontal, QScrollBar::top-arrow:horizontal {
+    display: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}

@@ -1,0 +1,499 @@
+/* Generated from qlabel qss */
+QLabel#VLabel[fontWeight="light"]{
+	font-weight: light;
+}
+
+QLabel#VLabel[fontWeight="bold"]{
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="white"]{
+	color: @white;
+}
+
+QLabel#VLabel[textColor="black"]{
+	color: @black;
+}
+
+QLabel#VLabel[textColor="primary"]{
+	color: @primary;
+}
+
+QLabel#VLabel[textColor="primary_tint"]{
+	color: @primary_tint;
+}
+
+QLabel#VLabel[textColor="primary_shade"]{
+	color: @primary_shade;
+}
+
+QLabel#VLabel[textColor="secondary"]{
+	color: @secondary;
+}
+
+QLabel#VLabel[textColor="secondary_tint"]{
+	color: @secondary_tint;
+}
+
+QLabel#VLabel[textColor="secondary_shade"]{
+	color: @secondary_shade;
+}
+
+QLabel#VLabel[textColor="tertiary"]{
+	color: @tertiary;
+}
+
+QLabel#VLabel[textColor="tertiary_tint"]{
+	color: @tertiary_tint;
+}
+
+QLabel#VLabel[textColor="tertiary_shade"]{
+	color: @tertiary_shade;
+}
+
+QLabel#VLabel[textColor="success"]{
+	color: @success;
+}
+
+QLabel#VLabel[textColor="success_tint"]{
+	color: @success_tint;
+}
+
+QLabel#VLabel[textColor="success_shade"]{
+	color: @success_shade;
+}
+
+QLabel#VLabel[textColor="danger"]{
+	color: @danger;
+}
+
+QLabel#VLabel[textColor="danger_tint"]{
+	color: @danger_tint;
+}
+
+QLabel#VLabel[textColor="danger_shade"]{
+	color: @danger_shade;
+}
+
+QLabel#VLabel[textColor="warning"]{
+	color: @warning;
+}
+
+QLabel#VLabel[textColor="warning_tint"]{
+	color: @warning_tint;
+}
+
+QLabel#VLabel[textColor="warning_shade"]{
+	color: @warning_shade;
+}
+
+QLabel#VLabel[textColor="medium"]{
+	color: @medium;
+}
+
+QLabel#VLabel[textColor="medium_tint"]{
+	color: @medium_tint;
+}
+
+QLabel#VLabel[textColor="medium_shade"]{
+	color: @medium_shade;
+}
+
+QLabel#VLabel[textColor="light"]{
+	color: @light;
+}
+
+QLabel#VLabel[textColor="light_tint"]{
+	color: @light_tint;
+}
+
+QLabel#VLabel[textColor="light_shade"]{
+	color: @light_shade;
+}
+
+QLabel#VLabel[textColor="dark"]{
+	color: @dark;
+}
+
+QLabel#VLabel[textColor="dark_tint"]{
+	color: @dark_tint;
+}
+
+QLabel#VLabel[textColor="dark_shade"]{
+	color: @dark_shade;
+}
+
+QLabel#VLabel[textColor="hover"]{
+	color: @hover;
+}
+
+QLabel#VLabel[textColor="hover_tint"]{
+	color: @hover_tint;
+}
+
+QLabel#VLabel[textColor="hover_shade"]{
+	color: @hover_shade;
+}
+
+QLabel#VLabel[textColor="highlight"]{
+	color: @highlight;
+}
+
+QLabel#VLabel[textColor="highlight_tint"]{
+	color: @highlight_tint;
+}
+
+QLabel#VLabel[textColor="highlight_shade"]{
+	color: @highlight_shade;
+}
+
+QLabel#VLabel[textColor="white"][fontWeight="light"]{
+	color: @white;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="white"][fontWeight="bold"]{
+	color: @white;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="black"][fontWeight="light"]{
+	color: @black;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="black"][fontWeight="bold"]{
+	color: @black;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="primary"][fontWeight="light"]{
+	color: @primary;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="primary"][fontWeight="bold"]{
+	color: @primary;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="primary_tint"][fontWeight="light"]{
+	color: @primary_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="primary_tint"][fontWeight="bold"]{
+	color: @primary_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="primary_shade"][fontWeight="light"]{
+	color: @primary_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="primary_shade"][fontWeight="bold"]{
+	color: @primary_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="secondary"][fontWeight="light"]{
+	color: @secondary;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="secondary"][fontWeight="bold"]{
+	color: @secondary;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="secondary_tint"][fontWeight="light"]{
+	color: @secondary_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="secondary_tint"][fontWeight="bold"]{
+	color: @secondary_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="secondary_shade"][fontWeight="light"]{
+	color: @secondary_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="secondary_shade"][fontWeight="bold"]{
+	color: @secondary_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="tertiary"][fontWeight="light"]{
+	color: @tertiary;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="tertiary"][fontWeight="bold"]{
+	color: @tertiary;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="tertiary_tint"][fontWeight="light"]{
+	color: @tertiary_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="tertiary_tint"][fontWeight="bold"]{
+	color: @tertiary_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="tertiary_shade"][fontWeight="light"]{
+	color: @tertiary_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="tertiary_shade"][fontWeight="bold"]{
+	color: @tertiary_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="success"][fontWeight="light"]{
+	color: @success;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="success"][fontWeight="bold"]{
+	color: @success;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="success_tint"][fontWeight="light"]{
+	color: @success_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="success_tint"][fontWeight="bold"]{
+	color: @success_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="success_shade"][fontWeight="light"]{
+	color: @success_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="success_shade"][fontWeight="bold"]{
+	color: @success_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="danger"][fontWeight="light"]{
+	color: @danger;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="danger"][fontWeight="bold"]{
+	color: @danger;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="danger_tint"][fontWeight="light"]{
+	color: @danger_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="danger_tint"][fontWeight="bold"]{
+	color: @danger_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="danger_shade"][fontWeight="light"]{
+	color: @danger_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="danger_shade"][fontWeight="bold"]{
+	color: @danger_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="warning"][fontWeight="light"]{
+	color: @warning;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="warning"][fontWeight="bold"]{
+	color: @warning;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="warning_tint"][fontWeight="light"]{
+	color: @warning_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="warning_tint"][fontWeight="bold"]{
+	color: @warning_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="warning_shade"][fontWeight="light"]{
+	color: @warning_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="warning_shade"][fontWeight="bold"]{
+	color: @warning_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="medium"][fontWeight="light"]{
+	color: @medium;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="medium"][fontWeight="bold"]{
+	color: @medium;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="medium_tint"][fontWeight="light"]{
+	color: @medium_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="medium_tint"][fontWeight="bold"]{
+	color: @medium_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="medium_shade"][fontWeight="light"]{
+	color: @medium_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="medium_shade"][fontWeight="bold"]{
+	color: @medium_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="light"][fontWeight="light"]{
+	color: @light;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="light"][fontWeight="bold"]{
+	color: @light;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="light_tint"][fontWeight="light"]{
+	color: @light_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="light_tint"][fontWeight="bold"]{
+	color: @light_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="light_shade"][fontWeight="light"]{
+	color: @light_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="light_shade"][fontWeight="bold"]{
+	color: @light_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="dark"][fontWeight="light"]{
+	color: @dark;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="dark"][fontWeight="bold"]{
+	color: @dark;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="dark_tint"][fontWeight="light"]{
+	color: @dark_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="dark_tint"][fontWeight="bold"]{
+	color: @dark_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="dark_shade"][fontWeight="light"]{
+	color: @dark_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="dark_shade"][fontWeight="bold"]{
+	color: @dark_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="hover"][fontWeight="light"]{
+	color: @hover;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="hover"][fontWeight="bold"]{
+	color: @hover;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="hover_tint"][fontWeight="light"]{
+	color: @hover_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="hover_tint"][fontWeight="bold"]{
+	color: @hover_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="hover_shade"][fontWeight="light"]{
+	color: @hover_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="hover_shade"][fontWeight="bold"]{
+	color: @hover_shade;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="highlight"][fontWeight="light"]{
+	color: @highlight;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="highlight"][fontWeight="bold"]{
+	color: @highlight;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="highlight_tint"][fontWeight="light"]{
+	color: @highlight_tint;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="highlight_tint"][fontWeight="bold"]{
+	color: @highlight_tint;
+	font-weight: bold;
+}
+
+QLabel#VLabel[textColor="highlight_shade"][fontWeight="light"]{
+	color: @highlight_shade;
+	font-weight: light;
+}
+
+QLabel#VLabel[textColor="highlight_shade"][fontWeight="bold"]{
+	color: @highlight_shade;
+	font-weight: bold;
+}
+

@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+
+        <!-- images -->
+        <!-- icons -->
+        <file>images/icons/checkmark.svg</file>
+        <file>images/icons/dash.svg</file>
+        <file>images/icons/chevron-right.svg</file>
+        <file>images/icons/chevron-right-selected.svg</file>
+        <file>images/icons/chevron-down.svg</file>
+        <file>images/icons/chevron-down-selected.svg</file>
+
+        <file>images/checkbox/checkmark.svg</file>
+        <file>images/checkbox/dash.svg</file>
+        <file>images/combobox/chevron-down.svg</file>
+
+        <!-- qss -->
+        <file>qss/q_line_edit.qss</file>
+        <file>qss/q_text_edit.qss</file>
+        <file>qss/q_check_box.qss</file>
+        <file>qss/q_combo_box.qss</file>
+        <file>qss/q_push_button.qss</file>
+        <file>qss/q_label.qss</file>
+        <file>qss/q_menu.qss</file>
+        <file>qss/q_scrollbar.qss</file>
+        <file>qss/q_splitter.qss</file>
+        <file>qss/q_progress_bar.qss</file>
+        <file>qss/q_slider.qss</file>
+        <file>qss/q_tree_widget.qss</file>
+        <file>qss/q_table_widget.qss</file>
+    </qresource>
+</RCC>

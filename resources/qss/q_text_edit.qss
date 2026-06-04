@@ -1,0 +1,15 @@
+QTextEdit#VTextEdit{
+    border: 1px solid @light_shade;
+    border-radius: 0px;
+    background: @white;
+    selection-background-color: @primary_tint;
+    padding: 1px;
+}
+
+QTextEdit#VTextEdit:read-only{
+    background: @light_tint;
+}
+
+QTextEdit#VTextEdit:focus {
+    border: 1px solid @primary;
+}

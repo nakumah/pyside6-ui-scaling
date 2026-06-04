@@ -1,0 +1,172 @@
+QPushButton#VPushButton{
+    border-radius: 2px;
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @light, stop: 1.0 @light_tint);
+    padding: 5px;
+    border: 1px solid @medium;
+    color: @dark_shade;
+}
+
+QPushButton#VPushButton:focus{
+    border: 1px solid @primary_shade;
+    color: @dark_tint;
+    border-radius: 3px;
+    padding: 1px;
+}
+
+QPushButton#VPushButton:pressed{
+    background-color: @medium_shade;
+    border-style: inset;
+    padding-left: 5px; 
+    padding-top: 1px;
+}
+
+QPushButton#VPushButton:hover{
+    background: @white;
+}
+
+QPushButton#VPushButton:flat{
+    border: none;
+}
+
+/* ============ light button ============ */
+
+QPushButton#VPushButton[buttonType="light"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @light, stop: 1.0 @light_tint);
+    border: 1px solid @light_shade;
+    color: @dark;
+}
+
+QPushButton#VPushButton[buttonType="light"]:focus{
+    border: 1px solid @light_shade;
+    color: @dark;
+}
+
+QPushButton#VPushButton[buttonType="light"]:pressed {
+    background-color: @light_shade;
+}
+
+QPushButton#VPushButton[buttonType="light"]:hover {
+    background: @light_tint;
+}
+
+/* ============ primary button ============ */
+
+QPushButton#VPushButton[buttonType="primary"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @primary, stop: 1.0 @primary_tint);
+    border: 1px solid @primary_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="primary"]:focus{
+    border: 1px solid @primary_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="primary"]:pressed {
+    background-color: @primary_shade;
+}
+
+QPushButton#VPushButton[buttonType="primary"]:hover {
+    background: @primary_tint;
+}
+
+/* ============ danger button ============ */
+
+QPushButton#VPushButton[buttonType="danger"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @danger, stop: 1.0 @danger_tint);
+    border: 1px solid @danger_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="danger"]:focus{
+    border: 1px solid @danger_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="danger"]:pressed {
+    background-color: @danger_shade;
+}
+
+QPushButton#VPushButton[buttonType="danger"]:hover {
+    background: @danger_tint;
+}
+
+/* ============ success button ============ */
+
+QPushButton#VPushButton[buttonType="success"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @success, stop: 1.0 @success_tint);
+    border: 1px solid @success_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="success"]:focus{
+    border: 1px solid @success_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="success"]:pressed {
+    background-color: @success_shade;
+}
+
+QPushButton#VPushButton[buttonType="success"]:hover {
+    background: @success_tint;
+}
+
+
+/* ============ warning button ============ */
+
+QPushButton#VPushButton[buttonType="warning"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @warning, stop: 1.0 @warning_tint);
+    border: 1px solid @warning_shade;
+    color: @dark;
+}
+
+QPushButton#VPushButton[buttonType="warning"]:focus{
+    border: 1px solid @warning_shade;
+    color: @dark;
+}
+
+QPushButton#VPushButton[buttonType="warning"]:pressed {
+    background-color: @warning_shade;
+}
+
+QPushButton#VPushButton[buttonType="warning"]:hover {
+    background: @warning_tint;
+}
+
+
+/* ============ dark button ============ */
+
+QPushButton#VPushButton[buttonType="dark"]{
+    background-color: qlineargradient(
+                                x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @dark, stop: 1.0 @dark_tint);
+    border: 1px solid @dark_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="dark"]:focus{
+    border: 1px solid @dark_shade;
+    color: @light;
+}
+
+QPushButton#VPushButton[buttonType="dark"]:pressed {
+    background-color: @dark_shade;
+}
+
+QPushButton#VPushButton[buttonType="dark"]:hover {
+    background: @dark_tint;
+}
+

@@ -1,0 +1,24 @@
+QProgressBar#VProgressBar{
+    border: none;
+    border-radius: 0px;
+    background-color: @light;
+
+    color: @dark_shade;
+    text-align: center;
+    font-weight: bold;
+}
+
+QProgressBar#VProgressBar::chunk{
+    background-color: @primary;
+    border: 1px solid @light;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+QProgressBar#VProgressBar[class="thin"]{
+    max-height: 5px;
+}
+
+QProgressBar#VProgressBar[class="thick"]{
+    max-height: 25px;
+}
