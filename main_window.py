@@ -7,9 +7,10 @@ import components as cpt
 import utils.hotkeys as hotkeys
 import resources.styling as sty
 
+
 from table import TableModel
 from utils.scaling import GUI_SCALER
-
+from resources.colors import AppColors
 
 class MainWindow(qtw.QMainWindow):
     def __init__(self, app: qtw.QApplication) -> None:
@@ -30,7 +31,7 @@ class MainWindow(qtw.QMainWindow):
         self.customButton = cpt.VPushButton("My Button")
 
         scrollAreaLayout = qtw.QVBoxLayout()
-        groupWidgetCount = 10
+        groupWidgetCount = 1
         groupWidgets = MainWindow.createGroupWidgets(groupWidgetCount)
         totalWidgetCount = 0
         for w in groupWidgets:
@@ -202,9 +203,56 @@ class MainWindow(qtw.QMainWindow):
             comboBox.addItem(icon, text)
 
         return comboBox
+    
+    @staticmethod
+    def tabWidget() -> qtw.QTabBar:
+
+        tabs = cpt.VTabWidget()
+        for i in range(5):
+            text = f"Entry {i + 1}"        
+            widget = cpt.VLabel(text)
+            tabs.addTab(widget, text)
+        
+        tabs.setMovable(False)
+        tabs.setTabsClosable(True)
+        # tabs.setTabPosition(qtw.QTabWidget.TabPosition.West)
+        return tabs
+    
+    @staticmethod
+    def toolBtnToolBar() -> qtw.QToolBar:
+        toolbar = cpt.VToolBar()
+
+        for i in range(3):
+            text = f"Btn {i + 1}"
+            btn = qtw.QToolButton()
+            btn.setText(text)
+            icon = qta.icon("msc.home", color=AppColors.medium, color_active=AppColors.primary, color_hover=AppColors.primary)
+            btn.setIcon(icon)
+            btn.setToolButtonStyle(qtg.Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+            toolbar.addWidget(btn)
+
+        toolbar.addSeparator()
+        
+        spacer = qtw.QWidget()
+        spacer.setSizePolicy(
+            qtw.QSizePolicy.Policy.Expanding,
+            qtw.QSizePolicy.Policy.Preferred,
+        )
+        toolbar.addWidget(spacer)
+        
+        toolbar.addSeparator()
+
+        btnEnd = qtw.QToolButton()
+        btnEnd.setText("Btn End")
+        toolbar.addWidget(btnEnd)
+
+        return toolbar
 
     @staticmethod
     def widgetGroup(groupIndex: int = -1) -> qtw.QWidget:
+
+        tabWidget = MainWindow.tabWidget()
+        tabWidget.setMinimumHeight(300)
 
         lineEdit = cpt.VLineEdit("Custom Line Edit Hello World")
         textEdit = cpt.VTextEdit("Custom Text Edit Hello World")
@@ -253,10 +301,14 @@ class MainWindow(qtw.QMainWindow):
         tableView.setModel(tableModel)
         tableView.setMinimumHeight(200)
 
+        toolButtonToolBar = MainWindow.toolBtnToolBar()
+
         groupIndexString = f" - {groupIndex}" if groupIndex > 0 else ""
         group = qtw.QGroupBox("Widget Group" + groupIndexString)
         layout = qtw.QVBoxLayout()
 
+        layout.addWidget(toolButtonToolBar)
+        layout.addWidget(tabWidget)
         layout.addWidget(splitter)
         layout.addWidget(progressBars)
         layout.addWidget(sliders)

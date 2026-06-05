@@ -1,0 +1,60 @@
+
+QTabWidget#VTabWidget::pane{
+    border-color: @light_shade;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-radius: 0px;
+}
+
+
+QTabWidget#VTabWidget QTabBar::tab {
+    padding: 5px 7px;
+    /* min-width: 20ex; */
+    background: @light;
+}
+
+QTabWidget#VTabWidget QTabBar::tab:hover {
+    /* background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 @light_tint,
+                                stop: 0.5 @light, stop: 1.0 @light_shade); */
+    background: @light_shade;
+}
+
+QTabWidget#VTabWidget QTabBar::tab:selected {
+    color: @primary;
+    border-color: @primary;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+}
+
+QTabWidget#VTabWidget QTabBar::tab:!selected {
+    color: @dark_tint;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+}
+
+QTabWidget#VTabWidget QTabBar::close-button {
+    border-image: url(":/images/icons/close.svg");
+    subcontrol-position: right;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+QTabWidget#VTabWidget QTabBar::close-button:hover {
+    border-image: url(":/images/icons/close.svg");
+    background: @primary;
+}
+
+QTabWidget#VTabWidget QTabBar::close-button:selected {
+    border-image: url(":/images/icons/close.svg");
+    background: transparent;
+}
+
+QTabWidget#VTabWidget QTabBar::close-button:hover {
+    border-image: url(":/images/icons/close-selected.svg");
+    background: @primary;
+}
+
+QTabWidget#VTabWidget QTabBar::tab:disabled{
+    color: @medium_tint;
+}

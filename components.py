@@ -221,3 +221,43 @@ class VTableView(qtw.QTableView):
         self.setFont(font)
 
 
+class VTabWidget(qtw.QTabWidget):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        GUI_SCALER.scaleChanged.connect(self.__updateFont__)
+        self.__setQSS()
+
+    def __setQSS(self):
+        self.setObjectName("VTabWidget")
+        sty.setStyleSheet(self, "q_tab_widget")
+
+    def __updateFont__(self, scale: float):
+
+        # update the font
+        font = self.font()
+        font.setPointSizeF(GUI_SCALER.baseFontSize() * scale)
+        self.setFont(font)
+
+
+class VToolBar(qtw.QToolBar):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        GUI_SCALER.scaleChanged.connect(self.__updateFont__)
+        self.__setQSS()
+
+    def __setQSS(self):
+        self.setObjectName("VToolBar")
+        sty.setStyleSheet(self, "q_toolbar")
+
+    def __updateFont__(self, scale: float):
+
+        for action in self.actions():
+            try:
+                widget = self.widgetForAction(action)
+                font = widget.font()
+                font.setPointSizeF(GUI_SCALER.baseFontSize() * scale)
+                widget.setFont(font)
+            except:
+                pass

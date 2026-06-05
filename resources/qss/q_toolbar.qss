@@ -1,0 +1,5 @@
+QToolBar#VToolBar::separator{
+    background-color: @medium;
+    width: 1px;
+    height: 1px;
+}

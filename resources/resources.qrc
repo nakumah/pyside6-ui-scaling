@@ -9,6 +9,8 @@
         <file>images/icons/chevron-right-selected.svg</file>
         <file>images/icons/chevron-down.svg</file>
         <file>images/icons/chevron-down-selected.svg</file>
+        <file>images/icons/close.svg</file>
+        <file>images/icons/close-selected.svg</file>
 
         <!-- qss -->
         <file>qss/q_line_edit.qss</file>
@@ -24,5 +26,7 @@
         <file>qss/q_slider.qss</file>
         <file>qss/q_tree_widget.qss</file>
         <file>qss/q_table_widget.qss</file>
+        <file>qss/q_toolbar.qss</file>
+        <file>qss/q_tab_widget.qss</file>
     </qresource>
 </RCC>
