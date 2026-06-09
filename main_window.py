@@ -120,7 +120,7 @@ class MainWindow(qtw.QMainWindow):
 
         for v in variantValues:
             btn = cpt.VPushButton(f"{v} button")
-            btn.setProperty("buttonType", v)
+            btn.setProperty("class", v)
             layout.addWidget(btn)
 
         layout.addWidget(cpt.VPushButton("default button"))
@@ -247,6 +247,29 @@ class MainWindow(qtw.QMainWindow):
         toolbar.addWidget(btnEnd)
 
         return toolbar
+    
+    @staticmethod
+    def propertySwapTest() -> qtw.QFrame:
+
+        def toggleProperty(button: cpt.VPushButton):
+            if button.property("class") == "danger":
+                button.setProperty("class", "primary")
+                button.setText("Primary Button")
+            else:
+                button.setText("Danger Button")
+                button.setProperty("class", "danger")
+            return
+
+        btn = cpt.VPushButton("Danger Button")
+        btn.setProperty("class", "danger")
+        btn.clicked.connect(lambda : toggleProperty(btn))
+
+        layout = qtw.QVBoxLayout()
+        layout.addWidget(btn)
+
+        frame = qtw.QFrame()
+        frame.setLayout(layout)
+        return frame
 
     @staticmethod
     def widgetGroup(groupIndex: int = -1) -> qtw.QWidget:
@@ -302,11 +325,13 @@ class MainWindow(qtw.QMainWindow):
         tableView.setMinimumHeight(200)
 
         toolButtonToolBar = MainWindow.toolBtnToolBar()
+        propertySwapTestWidget = MainWindow.propertySwapTest()
 
         groupIndexString = f" - {groupIndex}" if groupIndex > 0 else ""
         group = qtw.QGroupBox("Widget Group" + groupIndexString)
         layout = qtw.QVBoxLayout()
 
+        layout.addWidget(propertySwapTestWidget)
         layout.addWidget(toolButtonToolBar)
         layout.addWidget(tabWidget)
         layout.addWidget(splitter)
