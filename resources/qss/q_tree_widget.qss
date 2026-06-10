@@ -27,9 +27,10 @@ QTreeWidget#VTreeWidget::item:selected:!active {
 }
 
 /* Expand/collapse arrow */
-QTreeWidget#VTreeWidget::branch {
+/* QTreeWidget#VTreeWidget::branch {
     background: transparent;
 }
+
 
 QTreeWidget#VTreeWidget::branch:has-children:!has-siblings:closed,
 QTreeWidget#VTreeWidget::branch:closed:has-children:has-siblings {
@@ -39,10 +40,10 @@ QTreeWidget#VTreeWidget::branch:closed:has-children:has-siblings {
 QTreeWidget#VTreeWidget::branch:open:has-children:!has-siblings,
 QTreeWidget#VTreeWidget::branch:open:has-children:has-siblings {
     image: url(":/images/icons/chevron-down.svg");
-}
+} */
 
 /* Match branch background to item on hover/select */
-QTreeWidget#VTreeWidget::branch:hover {
+/* QTreeWidget#VTreeWidget::branch:hover {
     background: @hover;
 }
 
@@ -68,4 +69,4 @@ QTreeWidget#VTreeWidget::branch:selected:closed:has-children {
 
 QTreeWidget#VTreeWidget::branch:selected:open:has-children {
     image: url(":/images/icons/chevron-down-selected.svg");
-}
+} */
